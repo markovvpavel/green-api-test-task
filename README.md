@@ -17,22 +17,25 @@
 
    ```bash
    git clone https://github.com/green-api-test-task.git
+   ```
 
 2. Установите зависимости
 
     ```bash
     cd green-api-test-task; yarn install --frozen-lockfile
-
+    ```
 
 3. Для разработки
 
     ```bash
     yarn start
+    ```
 
 4. Для продакшн-сборки
 
     ```bash
     yarn build; yarn start
+    ```
 
 ## Скриншоты
 
