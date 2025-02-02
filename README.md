@@ -16,7 +16,7 @@
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/green-api-test-task.git
+   git clone https://github.com/markovvpavel/green-api-test-task.git
    ```
 
 2. Установите зависимости
