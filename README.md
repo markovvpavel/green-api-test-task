@@ -4,35 +4,6 @@
 
 Задание представляет собой веб-клиент, интегрированный с Green API, который позволяет отправлять и получать сообщения через WhatsApp, с базовой функциональностью для управления сообщениями и контактами.
 
-## Ссылка на сайт
-Вы можете попробовать демо по следующей ссылке: [Live Demo](https://greenapi-test-task.netlify.app)
-
-## Установка
-
-1. Клонируйте репозиторий:
-
-   ```bash
-   git clone https://github.com/markovvpavel/green-api-test-task.git
-   ```
-
-2. Установите зависимости
-
-    ```bash
-    cd green-api-test-task; yarn install --frozen-lockfile
-    ```
-
-3. Для разработки
-
-    ```bash
-    yarn start
-    ```
-
-4. Для продакшн-сборки
-
-    ```bash
-    yarn build; yarn start
-    ```
-
 ## Скриншоты
 
 ### 1. Страница авторизации
@@ -52,3 +23,33 @@
 На этой странице можно отправлять и получать сообщения в чате с выбранным контактом.
 
 ![Чат](https://github.com/markovvpavel/green-api-test-task/blob/main/assets/screenshots/3.jpg)
+
+## Ссылка на сайт
+
+Вы можете попробовать демо по следующей ссылке: [Live Demo](https://greenapi-test-task.netlify.app)
+
+## Установка
+
+1. Клонируйте репозиторий:
+
+   ```bash
+   git clone https://github.com/markovvpavel/green-api-test-task.git
+   ```
+
+2. Установите зависимости
+
+   ```bash
+   cd green-api-test-task; yarn install --frozen-lockfile
+   ```
+
+3. Для разработки
+
+   ```bash
+   yarn start
+   ```
+
+4. Для продакшн-сборки
+
+   ```bash
+   yarn build; yarn start
+   ```
