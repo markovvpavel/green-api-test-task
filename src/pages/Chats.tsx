@@ -42,7 +42,10 @@ export const ChatsPage = () => {
             .body as NotificationIncomingMessageReceived;
 
           const { messageData, timestamp } = webhookBody;
-          const { textMessage } = messageData.textMessageData;
+
+          const textMessage = messageData.textMessageData.textMessage;
+
+          if (!textMessage) return;
 
           const newMessage: Message = {
             chatId: webhookBody.senderData.chatId,
@@ -50,8 +53,6 @@ export const ChatsPage = () => {
             timestamp,
             type: "incoming",
           };
-
-          console.log(newMessage);
 
           dispatch(addMessage(newMessage));
         }
