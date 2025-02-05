@@ -36,19 +36,26 @@
    git clone https://github.com/markovvpavel/green-api-test-task.git
    ```
 
-2. Установите зависимости
+2. Перед установкой зависимостей необходимо создать файл `.env.local` в корне проекта. В этот файл нужно добавить следующие переменные окружения:
+
+   ```bash
+   REACT_APP_API_URL=https://7105.api.greenapi.com
+   REACT_APP_MEDIA_URL=https://7105.media.greenapi.com
+   ```
+
+3. Установите зависимости:
 
    ```bash
    cd green-api-test-task; yarn install --frozen-lockfile
    ```
 
-3. Для разработки
+4. Для разработки:
 
    ```bash
    yarn start
    ```
 
-4. Для продакшн-сборки
+5. Для продакшн-сборки:
 
    ```bash
    yarn build; yarn start
