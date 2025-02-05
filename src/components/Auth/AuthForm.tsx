@@ -16,6 +16,8 @@ export const AuthForm = () => {
   const dispatch = useAppDispatch();
 
   const [form, setForm] = useState({
+    apiUrl: "",
+    mediaUrl: "",
     idInstance: "",
     apiTokenInstance: "",
   });
@@ -74,7 +76,12 @@ export const AuthForm = () => {
     };
 
     try {
-      const response = await api.login({ ...form });
+      const { apiUrl, mediaUrl, apiTokenInstance, idInstance } = form;
+
+      Cookies.set(COOKIE_KEYS.API_URL, apiUrl);
+      Cookies.set(COOKIE_KEYS.MEDIA_URL, mediaUrl);
+
+      const response = await api.login({ apiTokenInstance, idInstance });
       const { stateInstance } = response.data;
       const status = statuses[stateInstance];
 
@@ -99,6 +106,32 @@ export const AuthForm = () => {
       <h2 className="mb-[48px]">Для начала введите ваши данные ниже.</h2>
 
       <div className="flex flex-col w-full">
+        <label className="mb-[8px] text-[14px]" htmlFor="apiUrl">
+          API URL:
+        </label>
+        <Input
+          name="apiUrl"
+          placeholder="https://7105.api.greenapi.com"
+          type="text"
+          value={form.apiUrl}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="flex flex-col w-full mt-[20px]">
+        <label className="mb-[8px] text-[14px]" htmlFor="mediaUrl">
+          Media URL:
+        </label>
+        <Input
+          name="mediaUrl"
+          placeholder="https://7105.media.greenapi.com"
+          type="text"
+          value={form.mediaUrl}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="flex flex-col w-full mt-[20px]">
         <label className="mb-[8px] text-[14px]" htmlFor="idInstance">
           ID Instance:
         </label>
